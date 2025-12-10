@@ -1,0 +1,248 @@
+/* ======================================= */
+/* ESTILOS GLOBALES Y PALETA BLANCO Y NEGRO */
+/* ======================================= */
+:root {
+    --color-principal: #000000; 
+    --color-secundario: #ffffff;
+    --color-texto-claro: #f4f4f4;
+    --color-fondo-claro: #ffffff;
+    --color-fondo-oscuro: #1a1a1a;
+    --font-principal: 'Roboto', sans-serif;
+    --font-peso-audaz: 900;
+    --color-whatsapp: #25d366; 
+}
+
+body {
+    font-family: var(--font-principal);
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo-claro);
+    color: var(--color-principal);
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* HEADER Y NAVEGACIÓN */
+header {
+    background-color: var(--color-fondo-oscuro);
+    color: var(--color-secundario);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.8em;
+    margin: 0;
+    color: var(--color-texto-claro);
+    font-weight: var(--font-peso-audaz);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: var(--color-texto-claro);
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ccc;
+}
+
+/* BOTÓN FLOTANTE WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px; 
+    right: 30px;
+    background-color: var(--color-whatsapp);
+    color: white;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    line-height: 55px;
+    font-size: 1.5em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-decoration: none;
+}
+
+/* SECCIÓN INICIO */
+#inicio {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding-left: 5%;
+    background-color: var(--color-fondo-oscuro); 
+    color: var(--color-secundario);
+}
+
+#inicio h2 {
+    font-size: 4em;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: var(--font-peso-audaz);
+}
+
+#inicio p {
+    font-size: 1.3em;
+    max-width: 600px;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.btn-catalogo {
+    background-color: var(--color-secundario);
+    color: var(--color-principal);
+    padding: 18px 35px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1em;
+    text-transform: uppercase;
+    border: 2px solid var(--color-principal);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-catalogo:hover {
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+}
+
+/* TÍTULOS GENERALES */
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 50px;
+    font-size: 2.5em;
+}
+
+/* CATÁLOGO */
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.producto-card {
+    background-color: var(--color-fondo-claro);
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    transition: box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.producto-card:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); 
+}
+
+.producto-card img {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.nombre { 
+    font-weight: 700; 
+    margin: 10px 0 5px; 
+    text-transform: uppercase;
+}
+
+.precio { 
+    color: var(--color-principal);
+    font-size: 1.3em; 
+    font-weight: 900;
+    margin-bottom: 5px; 
+}
+
+.talle { 
+    font-size: 0.9em; 
+    color: #555;
+    margin-bottom: 15px; 
+}
+
+.btn-whatsapp-card {
+    display: block;
+    background-color: var(--color-principal);
+    color: var(--color-secundario);
+    padding: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-whatsapp-card:hover {
+    background-color: #333;
+}
+
+/* SECCIONES GENERALES */
+section {
+    padding: 80px 0;
+    border-top: 1px solid #eee;
+}
+
+#sobre-nosotros p,
+#guiadetalles p,
+#envios-cambios p {
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--color-fondo-oscuro);
+    color: var(--color-texto-claro);
+    padding: 60px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer h4 {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 15px;
+    font-size: 1.2em;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.social-links a span {
+    font-size: 1.5em; 
+    margin-right: 5px;
+}
